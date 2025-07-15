@@ -12,7 +12,7 @@ require('./Models/db');
 const PORT = process.env.PORT || 8080;
 
 app.get('/ping', (req, res) => {
-    res.send('PONG');
+  res.redirect(process.env.FRONTEND_URL);
 });
 
 app.use(bodyParser.json());
