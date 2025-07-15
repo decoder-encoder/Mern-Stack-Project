@@ -21,19 +21,31 @@ body{
   display: flex;
   justify-content: center;
   align-items: center;
+  /* background: linear-gradient(-45deg, #6a11cb, #2575fc, #43cea2, #185a9d);
+  background-size: 400% 400%;
+  animation: gradientBG 15s ease infinite; */
+  background-color: white;
 }
 
 .container{
   background-color: #FFF;
-  padding: 32px 48px;
-  border-radius: 10px;
+  padding: 30px;
+  border-radius: 12 px;
   width: 100%;
-  max-width: 400px;
-  box-shadow: 8px 8px 24px 0px rgba(66, 68, 90, 1);
+  max-width: 550px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.2);
+  margin: 40px auto;
+  transition: transform 0.3s ease;
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
 }
 
 .container > h1{
   margin-bottom: 20px;
+}
+.container:hover {
+  transform: translateY(-3px);
 }
 
 .container > form{
@@ -72,6 +84,13 @@ button{
 }
 .expense-list{
   font-family: Arial,  sans-serif;
+  background: white;
+  padding: 1rem;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  border-radius: 1rem;
+  max-height: 400px;       /* optional: set height */
+  overflow-y: auto;        /* scroll if overflow */
+  min-width: 250px;
 }
 .expense-item{
   display: flex;
@@ -81,7 +100,11 @@ button{
 } 
 .user-section{
   display:flex;
-  justify-content: space-between;
+  justify-content: center;
+  align-items:center;
+   text-align: center;
+   width:100%;
+   margin-top: 20px;
 }
 .expense-description{
   font-weight: bold;
@@ -108,3 +131,140 @@ button{
   font-weight:bold;
 
 }
+/* @keyframes gradientBG {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+} */
+ .expense-details {
+  background-color: #ffffff;
+  padding: 30px 40px;
+  border-radius: 16px;
+  max-width: 500px;
+  margin: 30px auto;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
+  text-align: center;
+}
+
+.balance-text {
+  font-size: 24px;
+  font-weight: 600;
+  margin-bottom: 8px;
+  color: #555;
+}
+
+.balance-amount {
+  font-size: 36px;
+  font-weight: bold;
+  color: #3c4fe0;
+  margin-bottom: 24px;
+}
+
+.summary-container {
+  display: flex;
+  justify-content: space-around;
+  gap: 20px;
+}
+
+.summary-box {
+  flex: 1;
+  padding: 20px;
+  border-radius: 12px;
+  background-color: #f7f9fc;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.04);
+  transition: transform 0.3s ease;
+}
+
+.summary-box:hover {
+  transform: translateY(-4px);
+}
+
+.summary-box h3 {
+  font-size: 18px;
+  margin-bottom: 10px;
+  color: #444;
+}
+
+.amount {
+  font-size: 22px;
+  font-weight: bold;
+}
+
+.amount.income {
+  color: #27ae60;
+}
+
+.amount.expense {
+  color: #e74c3c;
+}
+/* Dashboard container layout */
+.dashboard-container {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 40px;
+  padding: 10px 10px 10px 10px;
+
+  max-width: 1500px;
+  margin-left: 0;      /* remove auto centering */
+  margin-right: 0;
+  flex-wrap: wrap;
+  box-shadow: 0 0 10px rgba(0,0,0,0.2);
+  border-radius: 8px;
+}
+
+/* Left section styling */
+.left-section {
+  flex: 1;
+  min-width: 300px;
+  max-width: 400px;
+  background-color: #ffffff;
+  padding: 32px 40px;
+  border-radius: 16px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.section {
+  display: flex;
+  justify-content: center; /* center welcome text horizontally */
+  align-items: center;
+  position: relative; /* so we can position logout button absolutely */
+  padding: 1rem;
+}
+
+.welcome-text {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.logout-button {
+  position: absolute;
+  right: 1rem;
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  cursor: pointer;
+}
+.expenseform {
+  text-align: center;
+  font-size: 1.8rem;      /* bigger font */
+  font-weight: bold;
+  margin-bottom: 20px;    /* spacing below title */
+  color: #333;
+}
+.transactions-heading{
+  text-align: center;
+  font-size: 1.8rem;      /* bigger font */
+  font-weight: bold;
+  margin-bottom: 20px;    /* spacing below title */
+  color: #333;
+}
+
+

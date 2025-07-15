@@ -24,7 +24,7 @@ function ExpenseTrackerForm( {addExpenses}) {
     }
   return (
     <div className='container'>
-                <h1>Expense Tracker</h1>
+                <h1 className='expenseform'>Expense Tracker</h1>
                 <form onSubmit={handleExpenses}>
                     <div>
                         <label htmlFor='email'>Expense Description</label>

@@ -6,6 +6,7 @@ function ExpensesTable ({expenses,handleDeleteExpense
     console.log('ExpenseTable-->',expenses);
   return (
     <div className='expense-list'>
+        <h2 className='transactions-heading'>Transactions</h2>
         {
             expenses?.map((expense,index)=>(
                 <div key={index} className='expense-item'>

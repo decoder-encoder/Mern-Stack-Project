@@ -54,21 +54,29 @@ function Signup() {
         }
     }
     return (
-        <div className='container'>
-            <h1>Signup</h1>
-            <form onSubmit={handleSignup}>
-                <div>
+        <div className="auth-container">
+            {/* Left Illustration Panel */}
+            <div className="auth-left">
+                <h1 className="animated-heading">Welcome to Expenso</h1>
+                <img src="/fintechsignup.png" alt="Fintech Signup" className="auth-illustration" />
+                <h2>Start Your Journey</h2>
+                <p>Join us and take charge of your financial future.</p>
+            </div>
+
+            {/* Right Signup Form */}
+            <div className="auth-right">
+                <h1>🔐 Create Account</h1>
+                <form onSubmit={handleSignup}>
                     <label htmlFor='name'>Name</label>
                     <input
                         onChange={handleChange}
                         type='text'
                         name='name'
-                        autoFocus
                         placeholder='Enter your name...'
                         value={signupInfo.name}
+                        required
                     />
-                </div>
-                <div>
+
                     <label htmlFor='email'>Email</label>
                     <input
                         onChange={handleChange}
@@ -76,9 +84,9 @@ function Signup() {
                         name='email'
                         placeholder='Enter your email...'
                         value={signupInfo.email}
+                        required
                     />
-                </div>
-                <div>
+
                     <label htmlFor='password'>Password</label>
                     <input
                         onChange={handleChange}
@@ -86,15 +94,19 @@ function Signup() {
                         name='password'
                         placeholder='Enter your password...'
                         value={signupInfo.password}
+                        required
                     />
-                </div>
-                <button type='submit'>Signup</button>
-                <span>Already have an account ?
-                    <Link to="/login">Login</Link>
-                </span>
-            </form>
-            <ToastContainer />
+
+                    <button type='submit'>Sign Up</button>
+
+                    <p className="auth-switch">
+                        Already have an account? <Link to="/login">Login</Link>
+                    </p>
+                </form>
+                <ToastContainer />
+            </div>
         </div>
+        
     )
 }
 
